@@ -17,10 +17,10 @@ void updateBPM();
 */
 
 // configure buttons
-OneButton button1(2, true, true);
-OneButton button2(3, true, true);
-OneButton button3(4, true, true);
-OneButton button4(5, true, true);
+OneButton button1(4, true, true);
+OneButton button2(5, true, true);
+OneButton button3(7, true, true);
+OneButton button4(9, true, true);
 
 // Create and bind the MIDI interface to the default hardware Serial port
 MIDI_CREATE_DEFAULT_INSTANCE();
@@ -30,6 +30,11 @@ const int MIDI_Base = 1;
 const int PIN = 10;
 const int NUMPIXELS = 4;
 const int neoBrightness = 15;
+
+const int neoButton1 = 2;
+const int neoButton2 = 1;
+const int neoButton3 = 3;
+const int neoButton4 = 4;
 
 //Create pixles object
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
@@ -49,7 +54,7 @@ noDelay blinkTime(250, updateBlink, false);
 
 //BPM interval vars
 bool blinkBPM_State = true;
-int  bpmLED         = 4;
+int  bpmLED         = neoButton4;
 long lastPress      = millis();
 
 noDelay bpmTime(500, updateBPM, false);
@@ -116,7 +121,7 @@ void button1Press() {
       MIDI.sendNoteOn(38, 127, MIDI_Base);
       break;
   }
-  setBlink(1);
+  setBlink(neoButton1);
 }
 
 void button1LongPressStart() {
@@ -129,7 +134,7 @@ void button1LongPressStart() {
   } else {
     page = 0;
   }
-  setBlink(1,2);
+  setBlink(neoButton1, 2);
 }
 
 
@@ -153,7 +158,7 @@ void button2Press() {
       MIDI.sendNoteOn(39, 127, MIDI_Base);
       break;
   }
-  setBlink(2);
+  setBlink(neoButton2);
 }
 
 void button2LongPressStart() {
@@ -175,7 +180,7 @@ void button2LongPressStart() {
       MIDI.sendControlChange(72, 127, MIDI_Base);
       break;
   }
-  setBlink(2,2);
+  setBlink(neoButton2,2);
 }
 
 // button 3 Events
@@ -198,7 +203,7 @@ void button3Press() {
       MIDI.sendNoteOn(40, 127, MIDI_Base);
       break;
   }
-  setBlink(3);
+  setBlink(neoButton3);
 }
 
 void button3LongPressStart() {
@@ -220,6 +225,7 @@ void button3LongPressStart() {
       MIDI.sendNoteOn(48, 127, MIDI_Base);
       break;
   }
+  setBlink(neoButton3,2);
 }
 
 
@@ -242,7 +248,7 @@ void button4Press() {
       
       //Note C#3 ON
       MIDI.sendNoteOn(49, 127, MIDI_Base);
-      setBlink(4);
+      setBlink(neoButton4);
       break;
   }
 }
@@ -267,7 +273,7 @@ void button4LongPressStart() {
       MIDI.sendControlChange(68, 0, MIDI_Base);
       break;
   }
-  setBlink(4,2);
+  setBlink(neoButton4,2);
 }
 
 
