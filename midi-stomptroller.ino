@@ -16,7 +16,7 @@ void updateBPM();
       ---------
 */
 
-// configure buttons
+// configure button pins
 OneButton button1(4, true, true);
 OneButton button2(5, true, true);
 OneButton button3(7, true, true);
@@ -31,6 +31,10 @@ const int PIN = 10;
 const int NUMPIXELS = 4;
 const int neoBrightness = 15;
 
+/** Mapping for NeoPixels to button
+  Mapping below matches the included schematic
+  <button number> = <NeoPixel address>;
+*/
 const int neoButton1 = 2;
 const int neoButton2 = 1;
 const int neoButton3 = 3;
