@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'MIDI Stomptroller',
   tagline: 'Arduino based MIDI controller for the Line6 Helix Stomp',
-  url: 'https://github.com/',
-  baseUrl: '/',
+  url: 'https://noahcallaway.github.io/',
+  baseUrl: '/midi-stomptroller/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -37,9 +37,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'MIDI Stomptroller',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Logo',
           src: 'img/logo.svg',
         },
         items: [
