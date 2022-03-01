@@ -1,9 +1,8 @@
 # midi-stomptroller
-Helix Stomp MIDI controller
+4-Switch MIDI controller for the Line6 Helix Stomp
 
-<h2>Libraries Used
+[**Docs and build info here**](https://noahcallaway.github.io/midi-stomptroller/)
 
-- https://github.com/M-tech-Creations/NoDelay
-- https://github.com/FortySevenEffects/arduino_midi_library/tree/dev
-- https://github.com/adafruit/Adafruit_NeoPixel
-- https://github.com/mathertel/OneButton
+![Helix and Pedal](/doc/static/img/helix_pedal.png)
+
+![Pedal](/doc/static/img/pedal_on.png)
