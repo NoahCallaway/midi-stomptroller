@@ -3,6 +3,6 @@
 
 [**Docs and build info here**](https://noahcallaway.github.io/midi-stomptroller/)
 
-![Helix and Pedal](/doc/static/img/helix_pedal.png)
+![Helix and Pedal](/docs/static/img/helix_pedal.png)
 
-![Pedal](/doc/static/img/pedal_on.png)
+![Pedal](/docs/static/img/pedal_on.png)
