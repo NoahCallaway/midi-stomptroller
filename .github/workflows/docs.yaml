@@ -18,7 +18,7 @@ jobs:
       working-directory: docs
       run: npm run build
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.2.5
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
         BRANCH: gh-pages
         FOLDER: docs/build
